@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Me!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Comic+Neue:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #ffecd1;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .title {
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        
+        .scalloped-border {
+            background-image: radial-gradient(circle at 10px -5px, transparent 20px, #ffcc80 20px);
+            background-size: 20px 20px;
+            height: 15px;
+            margin-top: -1px;
+        }
+        
+        .paperclip {
+            position: absolute;
+            width: 18px;
+            height: 36px;
+            border: 3px solid #ff9800;
+            border-bottom: none;
+            border-radius: 50% 50% 0 0;
+            transform: rotate(45deg);
+            right: 15px;
+            top: -8px;
+            z-index: 10;
+        }
+        
+        input, textarea {
+            background-color: white;
+            border: 1px solid #ffcc80;
+            border-radius: 4px;
+            padding: 6px 8px;
+            width: 100%;
+            font-family: 'Comic Neue', cursive;
+            margin-top: 2px;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #ff9800;
+            font-size: 0.95rem;
+        }
+        
+        .star-rating {
+            color: #ffc107;
+            letter-spacing: -1px;
+        }
+        
+        .star-empty {
+            color: #e0e0e0;
+        }
+        
+        .photo-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .photo-frame {
+            border: 3px solid #ffcc80;
+            border-radius: 4px;
+            padding: 3px;
+            background-color: white;
+        }
+        
+        .compact-form > div {
+            margin-bottom: 8px;
+        }
+        
+        .compact-form textarea {
+            min-height: 60px;
+            resize: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex justify-center items-center p-2">
+    <div class="max-w-xl w-full mx-auto shadow-lg">
+        <!-- Header with title -->
+        <div class="bg-amber-300 rounded-t-lg p-3 relative">
+            <h1 class="title text-3xl text-center font-bold text-white m-0" style="text-shadow: -2px -2px 0 #ff9800, 2px -2px 0 #ff9800, -2px 2px 0 #ff9800, 2px 2px 0 #ff9800;">ALL ABOUT ME!</h1>
+            
+            <!-- Decorative squiggles -->
+            <div class="absolute top-3 left-3 text-white text-2xl">~</div>
+            <div class="absolute top-3 right-3 text-white text-2xl">~</div>
+        </div>
+        
+        <!-- Scalloped border -->
+        <div class="scalloped-border"></div>
+        
+        <!-- Main content -->
+        <div class="bg-amber-200 p-4 rounded-b-lg">
+            <div class="grid grid-cols-1 md:grid-cols-7 gap-3">
+                <!-- Left column - Form fields -->
+                <div class="md:col-span-4 compact-form">
+                    <div>
+                        <label for="name">Name :</label>
+                        <input type="text" id="name" name="name" value="Nguyễn Minh Quang" readonly class="text-sm">
+                    </div>
+                    
+                    <div>
+                        <label for="age">Age :</label>
+                        <input type="text" id="age" name="age" value="2x" readonly class="text-sm">
+                    </div>
+                    
+                    <div>
+                        <label for="birthday">Birthday :</label>
+                        <input type="text" id="birthday" name="birthday" value="13/09/200x" readonly class="text-sm">
+                    </div>
+                    
+                    <div>
+                        <label for="funfacts">Fun Facts :</label>
+                        <textarea id="funfacts" name="funfacts" readonly class="text-sm">Act like an amateur actor. Often like that...</textarea>
+                    </div>
+                    
+                    <!-- Favorites section moved up from bottom -->
+                    <div class="bg-amber-100 p-2 rounded-lg mt-2">
+                        <h3 class="text-center font-bold text-amber-500 text-sm mb-2">My Favorite</h3>
+                        
+                        <div class="flex items-center justify-between mb-1 text-sm">
+                            <span class="font-medium">Music</span>
+                            <div class="star-rating">★★★★★</div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-1 text-sm">
+                            <span class="font-medium">Game</span>
+                            <div class="star-rating">★★★★<span class="star-empty">★</span></div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-1 text-sm">
+                            <span class="font-medium">Book</span>
+                            <div class="star-rating">★★★<span class="star-empty">★★</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Watermelon decoration -->
+                    <div class="relative h-8 mt-1">
+                        <div class="absolute bottom-0 left-0">
+                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,50 A40,40 0 0,1 90,50 L90,90 L10,90 Z" fill="#ff6b6b"/>
+                                <path d="M15,55 A35,35 0 0,1 85,55 L85,85 L15,85 Z" fill="#f4f1bb"/>
+                                <circle cx="30" cy="65" r="3" fill="#3a3335"/>
+                                <circle cx="50" cy="70" r="3" fill="#3a3335"/>
+                                <circle cx="70" cy="65" r="3" fill="#3a3335"/>
+                                <circle cx="40" cy="80" r="3" fill="#3a3335"/>
+                                <circle cx="60" cy="80" r="3" fill="#3a3335"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right column - Photo and dream section -->
+                <div class="md:col-span-3 space-y-3">
+                    <!-- Photo area -->
+                    <div class="bg-amber-100 p-2 rounded-lg relative">
+                        <div class="paperclip"></div>
+                        <div class="w-full photo-frame" style="height: 150px;">
+                            <div class="photo-container h-full">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-I5hibyNHMqrz4LAVsNsOUTUP4RZmTD.png" alt="Profile photo" class="rounded">
+                            </div>
+                        </div>
+                        <div class="text-center mt-1 text-xs text-amber-700">My favorite photo</div>
+                    </div>
+                    
+                    <!-- Dream section -->
+                    <div class="bg-amber-100 p-2 rounded-lg relative">
+                        <h3 class="text-center font-bold text-amber-500 text-sm mb-1">My Dream</h3>
+                        <p class="text-sm leading-snug m-0 p-1">Become a perfect version of myself in the future.</p>
+                        
+                        <!-- Pineapple decoration -->
+                        <div class="absolute bottom-1 right-1">
+                            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50,10 L60,25 L40,25 Z" fill="#4caf50"/>
+                                <path d="M30,30 C30,30 20,40 20,60 C20,80 40,90 50,90 C60,90 80,80 80,60 C80,40 70,30 70,30 Z" fill="#ffc107"/>
+                                <path d="M35,40 L35,80" stroke="#8d6e63" stroke-width="2"/>
+                                <path d="M50,40 L50,80" stroke="#8d6e63" stroke-width="2"/>
+                                <path d="M65,40 L65,80" stroke="#8d6e63" stroke-width="2"/>
+                                <path d="M25,50 L75,50" stroke="#8d6e63" stroke-width="2"/>
+                                <path d="M25,65 L75,65" stroke="#8d6e63" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
