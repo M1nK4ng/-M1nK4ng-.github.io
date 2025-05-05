@@ -1,211 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Me!</title>
+    <title>Bói Bài Tarot Huyền Bí</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Comic+Neue:wght@400;700&display=swap');
-        
         body {
-            font-family: 'Comic Neue', cursive;
-            background-color: #ffecd1;
-            margin: 0;
-            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
         }
-        
-        .title {
-            font-family: 'Bubblegum Sans', cursive;
-        }
-        
-        .scalloped-border {
-            background-image: radial-gradient(circle at 10px -5px, transparent 20px, #ffcc80 20px);
-            background-size: 20px 20px;
-            height: 15px;
-            margin-top: -1px;
-        }
-        
-        .paperclip {
-            position: absolute;
-            width: 18px;
-            height: 36px;
-            border: 3px solid #ff9800;
-            border-bottom: none;
-            border-radius: 50% 50% 0 0;
-            transform: rotate(45deg);
-            right: 15px;
-            top: -8px;
-            z-index: 10;
-        }
-        
-        input, textarea {
-            background-color: white;
-            border: 1px solid #ffcc80;
-            border-radius: 4px;
-            padding: 6px 8px;
-            width: 100%;
-            font-family: 'Comic Neue', cursive;
-            margin-top: 2px;
-        }
-        
-        label {
-            font-weight: bold;
-            color: #ff9800;
-            font-size: 0.95rem;
-        }
-        
-        .star-rating {
-            color: #ffc107;
-            letter-spacing: -1px;
-        }
-        
-        .star-empty {
-            color: #e0e0e0;
-        }
-        
-        .photo-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        .photo-frame {
-            border: 3px solid #ffcc80;
-            border-radius: 4px;
-            padding: 3px;
-            background-color: white;
-        }
-        
-        .compact-form > div {
-            margin-bottom: 8px;
-        }
-        
-        .compact-form textarea {
-            min-height: 60px;
-            resize: none;
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
-<body class="min-h-screen flex justify-center items-center p-2">
-    <div class="max-w-xl w-full mx-auto shadow-lg">
-        <!-- Header with title -->
-        <div class="bg-amber-300 rounded-t-lg p-3 relative">
-            <h1 class="title text-3xl text-center font-bold text-white m-0" style="text-shadow: -2px -2px 0 #ff9800, 2px -2px 0 #ff9800, -2px 2px 0 #ff9800, 2px 2px 0 #ff9800;">ALL ABOUT ME!</h1>
-            
-            <!-- Decorative squiggles -->
-            <div class="absolute top-3 left-3 text-white text-2xl">~</div>
-            <div class="absolute top-3 right-3 text-white text-2xl">~</div>
+<body class="min-h-screen bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-black/70 backdrop-blur-sm py-4 px-6 md:px-12 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-purple-300">Tarot Huyền Bí</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-purple-300 transition">Trang Chủ</a>
+                <a href="#services" class="hover:text-purple-300 transition">Dịch Vụ</a>
+                <a href="#about" class="hover:text-purple-300 transition">Giới Thiệu</a>
+                <a href="#testimonials" class="hover:text-purple-300 transition">Đánh Giá</a>
+                <a href="#contact" class="hover:text-purple-300 transition">Liên Hệ</a>
+            </div>
+            <div class="md:hidden text-xl">☰</div>
         </div>
-        
-        <!-- Scalloped border -->
-        <div class="scalloped-border"></div>
-        
-        <!-- Main content -->
-        <div class="bg-amber-200 p-4 rounded-b-lg">
-            <div class="grid grid-cols-1 md:grid-cols-7 gap-3">
-                <!-- Left column - Form fields -->
-                <div class="md:col-span-4 compact-form">
-                    <div>
-                        <label for="name">Name :</label>
-                        <input type="text" id="name" name="name" value="Nguyễn Minh Quang" readonly class="text-sm">
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 md:py-32 px-6 md:px-12 bg-gradient-to-b from-black/80 to-purple-900/40 backdrop-blur-sm">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Khám Phá Đường Đời Của Bạn</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-purple-100">Soi sáng hành trình của bạn thông qua trí tuệ cổ xưa của bài Tarot</p>
+            <a href="#contact" class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Đặt Lịch Xem Bài</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 px-6 md:px-12 bg-black/60 backdrop-blur-sm">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-purple-300">Dịch Vụ Xem Bài Tarot</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30 hover:border-purple-500 transition">
+                    <div class="text-purple-400 text-4xl mb-4">✧</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Xem Bài Cá Nhân</h3>
+                    <p class="mb-6 text-gray-300">Nhận được những hiểu biết sâu sắc về hành trình cá nhân, các mối quan hệ và đường đời của bạn thông qua bài Tarot.</p>
+                    <p class="text-purple-300 font-semibold">500.000đ / 30 phút</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30 hover:border-purple-500 transition">
+                    <div class="text-purple-400 text-4xl mb-4">✧</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Xem Bài Tình Duyên</h3>
+                    <p class="mb-6 text-gray-300">Khám phá động lực trong các mối quan hệ của bạn và nhận hướng dẫn về cách nuôi dưỡng và cải thiện chúng.</p>
+                    <p class="text-purple-300 font-semibold">700.000đ / 45 phút</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30 hover:border-purple-500 transition">
+                    <div class="text-purple-400 text-4xl mb-4">✧</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Xem Bài Sự Nghiệp</h3>
+                    <p class="mb-6 text-gray-300">Nhận hướng dẫn về các quyết định nghề nghiệp, cơ hội tiềm năng và phát triển chuyên môn của bạn.</p>
+                    <p class="text-purple-300 font-semibold">600.000đ / 40 phút</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 px-6 md:px-12 bg-gradient-to-b from-purple-900/40 to-black/80 backdrop-blur-sm">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="rounded-full w-64 h-64 mx-auto overflow-hidden border-4 border-purple-500/50">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZAwCkmSzn1wZ6bVUMYO8NOTDTclSfb.png" alt="Người Xem Bài Tarot" class="w-full h-full object-cover">
                     </div>
-                    
-                    <div>
-                        <label for="age">Age :</label>
-                        <input type="text" id="age" name="age" value="2x" readonly class="text-sm">
-                    </div>
-                    
-                    <div>
-                        <label for="birthday">Birthday :</label>
-                        <input type="text" id="birthday" name="birthday" value="13/09/200x" readonly class="text-sm">
-                    </div>
-                    
-                    <div>
-                        <label for="funfacts">Fun Facts :</label>
-                        <textarea id="funfacts" name="funfacts" readonly class="text-sm">Act like an amateur actor. Often like that...</textarea>
-                    </div>
-                    
-                    <!-- Favorites section moved up from bottom -->
-                    <div class="bg-amber-100 p-2 rounded-lg mt-2">
-                        <h3 class="text-center font-bold text-amber-500 text-sm mb-2">My Favorite</h3>
-                        
-                        <div class="flex items-center justify-between mb-1 text-sm">
-                            <span class="font-medium">Music</span>
-                            <div class="star-rating">★★★★★</div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-300">Về Người Xem Bài</h2>
+                    <p class="text-gray-300 mb-4">Với 6 năm kinh nghiệm trong việc xem bài Tarot, tôi đã giúp nhiều khách hàng tìm thấy sự rõ ràng và định hướng trong cuộc sống của họ.</p>
+                    <p class="text-gray-300 mb-4">Phương pháp của tôi kết hợp trí tuệ Tarot truyền thống với hướng dẫn trực giác để cung cấp cho bạn những hiểu biết có ý nghĩa phù hợp với hành trình độc đáo của bạn.</p>
+                    <p class="text-gray-300 mb-4">Tôi tin rằng Tarot là một công cụ mạnh mẽ để khám phá bản thân và phát triển cá nhân, cung cấp một tấm gương để phản ánh trí tuệ bên trong và soi sáng con đường phía trước của bạn.</p>
+                    <p class="text-purple-300 italic">"Bài Tarot kể một câu chuyện, nhưng bạn là tác giả của số phận của mình."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 md:py-24 px-6 md:px-12 bg-black/60 backdrop-blur-sm">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-purple-300">Đánh Giá Từ Khách Hàng</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30">
+                    <p class="italic text-gray-300 mb-6">"Buổi xem bài của tôi cực kỳ chính xác và cung cấp cho tôi sự rõ ràng mà tôi cần trong thời điểm khó khăn. Những hiểu biết tôi nhận được đã hướng dẫn tôi thực hiện những thay đổi tích cực trong cuộc sống."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Khách hàng" class="w-full h-full object-cover">
                         </div>
-                        
-                        <div class="flex items-center justify-between mb-1 text-sm">
-                            <span class="font-medium">Game</span>
-                            <div class="star-rating">★★★★<span class="star-empty">★</span></div>
-                        </div>
-                        
-                        <div class="flex items-center justify-between mb-1 text-sm">
-                            <span class="font-medium">Book</span>
-                            <div class="star-rating">★★★<span class="star-empty">★★</span></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Watermelon decoration -->
-                    <div class="relative h-8 mt-1">
-                        <div class="absolute bottom-0 left-0">
-                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10,50 A40,40 0 0,1 90,50 L90,90 L10,90 Z" fill="#ff6b6b"/>
-                                <path d="M15,55 A35,35 0 0,1 85,55 L85,85 L15,85 Z" fill="#f4f1bb"/>
-                                <circle cx="30" cy="65" r="3" fill="#3a3335"/>
-                                <circle cx="50" cy="70" r="3" fill="#3a3335"/>
-                                <circle cx="70" cy="65" r="3" fill="#3a3335"/>
-                                <circle cx="40" cy="80" r="3" fill="#3a3335"/>
-                                <circle cx="60" cy="80" r="3" fill="#3a3335"/>
-                            </svg>
+                        <div>
+                            <p class="font-semibold text-white">Nguyễn Thị Hương</p>
+                            <p class="text-purple-300 text-sm">Xem Bài Cá Nhân</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right column - Photo and dream section -->
-                <div class="md:col-span-3 space-y-3">
-                    <!-- Photo area -->
-                    <div class="bg-amber-100 p-2 rounded-lg relative">
-                        <div class="paperclip"></div>
-                        <div class="w-full photo-frame" style="height: 150px;">
-                            <div class="photo-container h-full">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-I5hibyNHMqrz4LAVsNsOUTUP4RZmTD.png" alt="Profile photo" class="rounded">
-                            </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30">
+                    <p class="italic text-gray-300 mb-6">"Ban đầu tôi còn hoài nghi, nhưng buổi xem bài sự nghiệp của tôi rất chính xác. Hướng dẫn tôi nhận được đã giúp tôi đưa ra quyết định dẫn đến thăng chức. Giờ tôi là khách hàng thường xuyên!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Khách hàng" class="w-full h-full object-cover">
                         </div>
-                        <div class="text-center mt-1 text-xs text-amber-700">My favorite photo</div>
-                    </div>
-                    
-                    <!-- Dream section -->
-                    <div class="bg-amber-100 p-2 rounded-lg relative">
-                        <h3 class="text-center font-bold text-amber-500 text-sm mb-1">My Dream</h3>
-                        <p class="text-sm leading-snug m-0 p-1">Become a perfect version of myself in the future.</p>
-                        
-                        <!-- Pineapple decoration -->
-                        <div class="absolute bottom-1 right-1">
-                            <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M50,10 L60,25 L40,25 Z" fill="#4caf50"/>
-                                <path d="M30,30 C30,30 20,40 20,60 C20,80 40,90 50,90 C60,90 80,80 80,60 C80,40 70,30 70,30 Z" fill="#ffc107"/>
-                                <path d="M35,40 L35,80" stroke="#8d6e63" stroke-width="2"/>
-                                <path d="M50,40 L50,80" stroke="#8d6e63" stroke-width="2"/>
-                                <path d="M65,40 L65,80" stroke="#8d6e63" stroke-width="2"/>
-                                <path d="M25,50 L75,50" stroke="#8d6e63" stroke-width="2"/>
-                                <path d="M25,65 L75,65" stroke="#8d6e63" stroke-width="2"/>
-                            </svg>
+                        <div>
+                            <p class="font-semibold text-white">Trần Văn Minh</p>
+                            <p class="text-purple-300 text-sm">Xem Bài Sự Nghiệp</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Tarot Cards Display -->
+    <section class="py-16 md:py-24 px-6 md:px-12 bg-gradient-to-b from-black/80 to-purple-900/40 backdrop-blur-sm">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-purple-300">Bộ Bài Tarot Huyền Bí</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                <!-- Card 1 -->
+                <div class="group relative">
+                    <div class="aspect-[2/3] bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-lg transform transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-3xl text-yellow-300 mb-2">★</div>
+                                <h3 class="text-lg font-bold text-white">Ngôi Sao</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="group relative">
+                    <div class="aspect-[2/3] bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-lg transform transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-3xl text-yellow-300 mb-2">☽</div>
+                                <h3 class="text-lg font-bold text-white">Mặt Trăng</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="group relative">
+                    <div class="aspect-[2/3] bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-lg transform transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-3xl text-yellow-300 mb-2">☉</div>
+                                <h3 class="text-lg font-bold text-white">Mặt Trời</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="group relative">
+                    <div class="aspect-[2/3] bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-lg transform transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-3xl text-yellow-300 mb-2">⚡</div>
+                                <h3 class="text-lg font-bold text-white">Tháp</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="group relative">
+                    <div class="aspect-[2/3] bg-gradient-to-b from-purple-800 to-indigo-900 rounded-lg overflow-hidden border-2 border-purple-500/50 shadow-lg transform transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-3xl text-yellow-300 mb-2">♥</div>
+                                <h3 class="text-lg font-bold text-white">Tình Nhân</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 px-6 md:px-12 bg-black/60 backdrop-blur-sm">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-purple-300">Đặt Lịch Xem Bài</h2>
+            <div class="max-w-2xl mx-auto bg-gray-800/70 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-purple-500/30">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Họ Tên</label>
+                            <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:border-purple-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Địa Chỉ Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:border-purple-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="service" class="block text-gray-300 mb-2">Loại Xem Bài</label>
+                        <select id="service" class="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:border-purple-500">
+                            <option value="personal">Xem Bài Cá Nhân (500.000đ)</option>
+                            <option value="relationship">Xem Bài Tình Duyên (700.000đ)</option>
+                            <option value="career">Xem Bài Sự Nghiệp (600.000đ)</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-300 mb-2">Số Điện Thoại</label>
+                        <input type="tel" id="phone" class="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:border-purple-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-300 mb-2">Câu Hỏi Hoặc Mối Quan Tâm Của Bạn</label>
+                        <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:border-purple-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Yêu Cầu Xem Bài</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 md:px-12 bg-black text-gray-400">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-xl font-bold text-purple-300 mb-2">Tarot Huyền Bí</div>
+                    <p>Soi sáng đường đời của bạn từ năm 2019</p>
+                </div>
+                <div class="flex space-x-6 text-purple-300 text-2xl">
+                    <a href="#" class="hover:text-purple-400 transition">✉</a>
+                    <a href="#" class="hover:text-purple-400 transition">♫</a>
+                    <a href="#" class="hover:text-purple-400 transition">♡</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Tarot Huyền Bí. Đã đăng ký bản quyền.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
